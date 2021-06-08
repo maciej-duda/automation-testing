@@ -1,0 +1,20 @@
+{
+	"video": false,
+	"defaultCommandTimeout": 5000,
+	"chromeWebSecurity": false,
+	"watchForFileChanges": false,
+	"viewportWidth": 1920,
+	"viewportHeight": 1080,
+	"waitForAnimations": true,
+	"animationDistanceThreshold": 20,
+	"execTimeout": 60000,
+	"pageLoadTimeout": 120000,
+	"requestTimeout": 15000,
+	"responseTimeout": 15000,
+	"failOnStatusCode": false,
+	"reporter": "cypress-mochawesome-reporter",
+	"env": {
+		"testUserEmail": "cypress.automation16@testarmy.com",
+		"env": ""
+	  }
+}
