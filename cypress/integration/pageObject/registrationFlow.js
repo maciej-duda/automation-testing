@@ -14,9 +14,6 @@ const testProgram = new TestProgram();
 const testerProfile = new TesterProfile();
 const registerPage = new RegisterPage();
 
-const testUserEmail = Cypress.env('testUserEmail');
-
-
 describe('Testing the sign up workflow', () => {
 	beforeEach(() => {
 		cy.clearLocalStorage();
@@ -35,7 +32,7 @@ describe('Testing the sign up workflow', () => {
 
 	it('Fill out the form as a Teacher type account', () => {
 		signUpPage.checkIfBasicElementsAreDisplayed();
-		signUpPage.fillFormAsTeacher('Cypress', 'Automation', testUserEmail);
+		signUpPage.fillFormAsTeacher('Cypress', 'Automation', Cypress.env('testUserEmail'));
 	});
 
 	it('Fill out the tablet form and go back to the main page', () => {
@@ -47,7 +44,7 @@ describe('Testing the sign up workflow', () => {
 	it('Login as a System Admin', () => {
 		loginPage.visitTestPage();
 		loginPage.verifyIfElementsAreDisplayed();
-		loginPage.fillCredentialsInputs('maciej.duda@testarmy.com', 'p1Vn7AGwV6MX#3QI');
+		loginPage.fillCredentialsInputs(Cypress.env('SALogin'), Cypress.env('SAPassword'));
 		loginPage.clickSubmitButton();
 	});
 
@@ -56,7 +53,7 @@ describe('Testing the sign up workflow', () => {
 		homePage.visitTestProgram();
 		testProgram.verifyIfElementsAreDisplayed();
 		testProgram.changeToWaitingListTab();
-		testProgram.openTesterProfile(testUserEmail);
+		testProgram.openTesterProfile(Cypress.env('testUserEmail'));
 		testerProfile.verifyIfElementsAreDisplayed();
 		testerProfile.approveTester();
 		testerProfile.saveInviteCode();
@@ -66,7 +63,7 @@ describe('Testing the sign up workflow', () => {
 	it('Register an account with Invite Code', () => {
 		splashPage.visitTestPage();
 		splashPage.inputInviteCode();
-		registerPage.checkIfInformationsAreLoaded(testUserEmail);
+		registerPage.checkIfInformationsAreLoaded(Cypress.env('testUserEmail'));
 		registerPage.fillPasswordField();
 		homePage.verifyIfElementsAreDisplayed();
 	})

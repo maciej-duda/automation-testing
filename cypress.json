@@ -14,7 +14,9 @@
 	"failOnStatusCode": false,
 	"reporter": "cypress-mochawesome-reporter",
 	"env": {
-		"testUserEmail": "cypress.automation16@testarmy.com",
-		"env": ""
+		"testUserEmail": "",
+		"testEnv": "",
+		"SALogin": "",
+		"SAPassword": ""
 	  }
 }
