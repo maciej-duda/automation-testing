@@ -1,5 +1,5 @@
 const selectors = {
-	pageHeader: "//h2[@class='ant-typography'][contains(.,'Cypress Automation')]",
+	userEmail: "//td[@class='ant-descriptions-item']",
     statusWaiting: "//td[@class='ant-descriptions-item'][contains(.,'StatusWAITING')]",
     approveButton: "//button[@type='button'][contains(.,'Approve')]",
     statusActive: "//td[@class='ant-descriptions-item'][contains(.,'StatusACTIVE')]",
@@ -9,7 +9,7 @@ const selectors = {
 class TesterProfile {
 
     verifyIfElementsAreDisplayed() {
-		cy.xpath(selectors.pageHeader).should('be.visible');
+		cy.xpath(selectors.userEmail).should('contains', Cypress.env('testUserEmail'));
         cy.xpath(selectors.statusWaiting).should('be.visible');
 	}
 

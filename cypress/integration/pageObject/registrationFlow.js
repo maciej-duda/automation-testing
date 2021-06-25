@@ -26,13 +26,12 @@ describe('Testing the sign up workflow', () => {
 	});
 
 	it('Go to the sign up page', () => {
-		splashPage.visitTestPage();
 		splashPage.clickSignUpLink();
 	});
 
 	it('Fill out the form as a Teacher type account', () => {
 		signUpPage.checkIfBasicElementsAreDisplayed();
-		signUpPage.fillFormAsTeacher('Cypress', 'Automation', Cypress.env('testUserEmail'));
+		signUpPage.fillFormAsTeacher('Cypress', 'TeacherAccount', Cypress.env('testUserEmail'));
 	});
 
 	it('Fill out the tablet form and go back to the main page', () => {

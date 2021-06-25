@@ -16,11 +16,11 @@ const tabletFormSelectors = {
     pageHeader: "//h3[@class='font-500 color-info pt-1'][contains(.,'You’re interested in Schoolified.  We’re interested in you!')]",
     formHeader: "//h3[@class='font-500 color-info'][contains(.,'Do you own a tablet?')]",
     trueCheckbox: "//span[@class='font-500 color-info'][contains(.,'Yes, I own a tablet.')]",
-    deviceBrand: "//div[@class='ant-select-selector'][contains(.,'I have a...')]",
+    deviceBrand: "//div[@class='ant-select-selector'][contains(.,'I have an...')]",
     deviceBrandIPad: "//div[@class='ant-select-item-option-content'][contains(.,'iPad')]",
-    deviceModel: "//div[@class='ant-select-selector'][contains(.,'Please select your tablet device...')]",
+    deviceModel: "//div[@class='ant-select-selector'][contains(.,'My iPad is a...')]",
     deviceModelIPadPro: "//div[@class='ant-select-item-option-content'][contains(.,'iPad Pro')]",
-    deviceOS: "//div[@class='ant-select-selector'][contains(.,'Please select your OS...')]",
+    deviceOS: "//div[@class='ant-select-selector'][contains(.,'My iPad is running...')]",
     deviceOS14: "//div[@class='ant-select-item-option-content'][contains(.,'iOS 14')]",
     submitButton: "//button[@type='button'][contains(.,'Submit')]"
 };

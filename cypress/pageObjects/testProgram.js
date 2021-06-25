@@ -4,7 +4,7 @@ const selectors = {
     waitingListLink: "//div[@role='tab'][contains(.,'Waiting')]",
     searchBox: "//input[contains(@placeholder,'Type to search tester')]",
     magnifyingGlassButton: "//span[contains(@aria-label,'search')]",
-    testUserLink: "//a[contains(.,'Cypress Automation')]",
+    testUserLink: " //a[contains(.,'Cypress TeacherAccount')]",
 };
 
 class TestProgram {
