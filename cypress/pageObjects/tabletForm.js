@@ -22,11 +22,5 @@ class TabletForm {
         cy.xpath(tabletFormSelectors.deviceOS14).click();
         cy.xpath(tabletFormSelectors.submitButton).click();
     }
-
-    checkThankYouScreen(){
-        cy.xpath(thankYouScreenSelectors.thankYouMessage).should('be.visible');
-        cy.xpath(thankYouScreenSelectors.backButton).should('be.visible').click();
-    }
 }
-
 export default TabletForm;

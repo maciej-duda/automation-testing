@@ -13,7 +13,6 @@ const signUpFormSelectors = {
 };
 
 class SignUpPage {
-
     visitTestPage() {
 		cy.visit(signUpFormSelectors.pageURL);
 	}

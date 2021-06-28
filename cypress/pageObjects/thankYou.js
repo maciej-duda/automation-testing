@@ -9,5 +9,4 @@ class ThankYou {
         cy.xpath(thankYouScreenSelectors.backButton).should('be.visible').click();
     }
 }
-
 export default ThankYou;
