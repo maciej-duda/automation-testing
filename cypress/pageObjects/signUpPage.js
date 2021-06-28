@@ -11,11 +11,6 @@ const signUpFormSelectors = {
     termsOfUseCheckbox: ":nth-child(6) > .neu-check-box > .ant-checkbox > .ant-checkbox-input",
     signUpButton: "//button[@type='submit'][contains(.,'Sign Up')]",
 };
-/* Move this to separate page object as it's different view */ 
-const thankYouScreenSelectors = {
-    thankYouMessage: "//h4[@class='ant-typography text-bold color-info'][contains(.,'Thank you')]",
-    backButton: "//a[contains(.,'Back')]"
-};
 
 class SignUpPage {
 
@@ -38,11 +33,6 @@ class SignUpPage {
         cy.get(signUpFormSelectors.termsOfUseCheckbox).click();
         cy.xpath(signUpFormSelectors.signUpButton).click();
         cy.wait(10000);
-    }
-
-    checkThankYouScreen(){
-        cy.xpath(thankYouScreenSelectors.thankYouMessage).should('be.visible');
-        cy.xpath(thankYouScreenSelectors.backButton).should('be.visible').click();
     }
 }
 

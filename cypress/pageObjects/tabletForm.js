@@ -10,9 +10,7 @@ const tabletFormSelectors = {
     submitButton: "//button[@type='button'][contains(.,'Submit')]"
 };
 
-
 class TabletForm {
-
     fillDeviceForm() {
         cy.xpath(tabletFormSelectors.formHeader).should('be.visible');
         cy.xpath(tabletFormSelectors.trueCheckbox).click();
