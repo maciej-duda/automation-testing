@@ -19,8 +19,6 @@ const tabletForm = new TabletForm();
 const thankYou = new ThankYou();
 
 describe('Testing the sign up workflow', () => {
-	beforeEach(() => {
-	  })
 
 	it('Visit main page', () => {
 		splashPage.visitTestPage();

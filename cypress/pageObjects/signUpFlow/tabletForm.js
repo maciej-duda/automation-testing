@@ -1,4 +1,4 @@
-const tabletFormSelectors = {
+const selectors = {
     formHeader: "//h3[@class='font-500 color-info'][contains(.,'Do you own a tablet?')]",
     trueCheckbox: "//span[@class='font-500 color-info'][contains(.,'Yes, I own a tablet.')]",
     deviceBrand: "//div[@class='ant-select-selector'][contains(.,'I have an...')]",
@@ -12,15 +12,15 @@ const tabletFormSelectors = {
 
 class TabletForm {
     fillDeviceForm() {
-        cy.xpath(tabletFormSelectors.formHeader).should('be.visible');
-        cy.xpath(tabletFormSelectors.trueCheckbox).click();
-        cy.xpath(tabletFormSelectors.deviceBrand).click();
-        cy.xpath(tabletFormSelectors.deviceBrandIPad).click();
-        cy.xpath(tabletFormSelectors.deviceModel).click();
-        cy.xpath(tabletFormSelectors.deviceModelIPadPro).click();
-        cy.xpath(tabletFormSelectors.deviceOS).click();
-        cy.xpath(tabletFormSelectors.deviceOS14).click();
-        cy.xpath(tabletFormSelectors.submitButton).click();
+        cy.xpath(selectors.formHeader).should('be.visible');
+        cy.xpath(selectors.trueCheckbox).click();
+        cy.xpath(selectors.deviceBrand).click();
+        cy.xpath(selectors.deviceBrandIPad).click();
+        cy.xpath(selectors.deviceModel).click();
+        cy.xpath(selectors.deviceModelIPadPro).click();
+        cy.xpath(selectors.deviceOS).click();
+        cy.xpath(selectors.deviceOS14).click();
+        cy.xpath(selectors.submitButton).click();
     }
 }
 export default TabletForm;
