@@ -5,6 +5,7 @@ import HomePage from '../../pageObjects/homePage';
 import TestProgram from '../../pageObjects/testProgram';
 import TesterProfile from '../../pageObjects/testerProfile';
 import RegisterPage from '../../pageObjects/registerPage';
+import TabletForm from '../../pageObjects/tabletForm';
 
 const splashPage = new SplashPage();
 const loginPage = new LoginPage();
@@ -13,6 +14,7 @@ const homePage = new HomePage();
 const testProgram = new TestProgram();
 const testerProfile = new TesterProfile();
 const registerPage = new RegisterPage();
+const tabletForm = new TabletForm();
 
 describe('Testing the sign up workflow', () => {
 	beforeEach(() => {
@@ -33,7 +35,7 @@ describe('Testing the sign up workflow', () => {
 	});
 
 	it('Fill out the tablet form and go back to the main page', () => {
-		signUpPage.fillDeviceForm();
+		tabletForm.fillDeviceForm();
 		signUpPage.checkThankYouScreen();
 		splashPage.checkIfBasicElementsAreDisplayed();
 	});
