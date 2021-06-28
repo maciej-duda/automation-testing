@@ -1,2 +1,4 @@
 node_modules
-inviteCode.txt
+cypress/videos
+cypress/screenshots
+cypress/reports
