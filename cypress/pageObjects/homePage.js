@@ -2,7 +2,7 @@ const selectors = {
 	pageURL: "https://uat.app.schoolified.kitemetric.com/",
 	welcomeHeader: "//h1[contains(.,'Welcome to Schoolified')]",
     logoutButton: "//button[@type='button'][contains(.,'Log Out')]",
-	testProgramLink: "//a[contains(.,'Test Program')]"
+	testProgramLink: "//a[contains(.,'Beta Program')]"
 };
 
 class HomePage {

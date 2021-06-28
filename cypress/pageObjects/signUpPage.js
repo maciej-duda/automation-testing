@@ -11,9 +11,8 @@ const signUpFormSelectors = {
     termsOfUseCheckbox: ":nth-child(6) > .neu-check-box > .ant-checkbox > .ant-checkbox-input",
     signUpButton: "//button[@type='submit'][contains(.,'Sign Up')]",
 };
-
+/* Move this to separate page object as it's different view */ 
 const tabletFormSelectors = {
-    pageHeader: "//h3[@class='font-500 color-info pt-1'][contains(.,'You’re interested in Schoolified.  We’re interested in you!')]",
     formHeader: "//h3[@class='font-500 color-info'][contains(.,'Do you own a tablet?')]",
     trueCheckbox: "//span[@class='font-500 color-info'][contains(.,'Yes, I own a tablet.')]",
     deviceBrand: "//div[@class='ant-select-selector'][contains(.,'I have an...')]",
@@ -24,7 +23,7 @@ const tabletFormSelectors = {
     deviceOS14: "//div[@class='ant-select-item-option-content'][contains(.,'iOS 14')]",
     submitButton: "//button[@type='button'][contains(.,'Submit')]"
 };
-
+/* Move this to separate page object as it's different view */ 
 const thankYouScreenSelectors = {
     thankYouMessage: "//h4[@class='ant-typography text-bold color-info'][contains(.,'Thank you')]",
     backButton: "//a[contains(.,'Back')]"
@@ -50,10 +49,11 @@ class SignUpPage {
         cy.xpath(signUpFormSelectors.contactCheckbox).click();
         cy.get(signUpFormSelectors.termsOfUseCheckbox).click();
         cy.xpath(signUpFormSelectors.signUpButton).click();
+        cy.wait(10000);
     }
 
     fillDeviceForm() {
-        cy.xpath(tabletFormSelectors.pageHeader).should('be.visible');
+        cy.xpath(tabletFormSelectors.formHeader).should('be.visible');
         cy.xpath(tabletFormSelectors.trueCheckbox).click();
         cy.xpath(tabletFormSelectors.deviceBrand).click();
         cy.xpath(tabletFormSelectors.deviceBrandIPad).click();

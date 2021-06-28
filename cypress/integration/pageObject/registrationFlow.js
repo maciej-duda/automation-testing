@@ -16,8 +16,6 @@ const registerPage = new RegisterPage();
 
 describe('Testing the sign up workflow', () => {
 	beforeEach(() => {
-		cy.clearLocalStorage();
-		cy.clearCookies();
 	  })
 
 	it('Visit main page', () => {
@@ -31,7 +29,7 @@ describe('Testing the sign up workflow', () => {
 
 	it('Fill out the form as a Teacher type account', () => {
 		signUpPage.checkIfBasicElementsAreDisplayed();
-		signUpPage.fillFormAsTeacher('Cypress', 'TeacherAccount', Cypress.env('testUserEmail'));
+		signUpPage.fillFormAsTeacher('Cypress', 'Teacher2Account', Cypress.env('testUserEmail'));
 	});
 
 	it('Fill out the tablet form and go back to the main page', () => {
@@ -62,7 +60,6 @@ describe('Testing the sign up workflow', () => {
 	it('Register an account with Invite Code', () => {
 		splashPage.visitTestPage();
 		splashPage.inputInviteCode();
-		registerPage.checkIfInformationsAreLoaded(Cypress.env('testUserEmail'));
 		registerPage.fillPasswordField();
 		homePage.verifyIfElementsAreDisplayed();
 	})

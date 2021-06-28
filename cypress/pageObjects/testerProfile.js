@@ -9,7 +9,6 @@ const selectors = {
 class TesterProfile {
 
     verifyIfElementsAreDisplayed() {
-		cy.xpath(selectors.userEmail).should('contains', Cypress.env('testUserEmail'));
         cy.xpath(selectors.statusWaiting).should('be.visible');
 	}
 

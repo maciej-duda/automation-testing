@@ -8,7 +8,7 @@ const selectors = {
 
 class RegisterPage {
 
-    checkIfInformationsAreLoaded(emailAddress) {
+    checkIfInformationsAreLoaded() {
 		cy.xpath(selectors.firstName).should('be.visible');
         cy.xpath(selectors.lastName).should('be.visible');
 	}
