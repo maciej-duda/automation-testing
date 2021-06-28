@@ -1,12 +1,12 @@
-import LoginPage from '../../pageObjects/loginPage';
-import SplashPage from '../../pageObjects/splashPage';
-import SignUpPage from '../../pageObjects/signUpPage';
-import HomePage from '../../pageObjects/homePage';
-import TestProgram from '../../pageObjects/testProgram';
-import TesterProfile from '../../pageObjects/testerProfile';
-import RegisterPage from '../../pageObjects/registerPage';
-import TabletForm from '../../pageObjects/tabletForm';
-import ThankYou from '../../pageObjects/thankYou';
+import LoginPage from '../../pageObjects/signUpFlow/loginPage';
+import SplashPage from '../../pageObjects/signUpFlow/splashPage';
+import SignUpPage from '../../pageObjects/signUpFlow/signUpPage';
+import HomePage from '../../pageObjects/signUpFlow/homePage';
+import TestProgram from '../../pageObjects/signUpFlow/testProgram';
+import TesterProfile from '../../pageObjects/signUpFlow/testerProfile';
+import RegisterPage from '../../pageObjects/signUpFlow/registerPage';
+import TabletForm from '../../pageObjects/signUpFlow/tabletForm';
+import ThankYou from '../../pageObjects/signUpFlow/thankYou';
 
 const splashPage = new SplashPage();
 const loginPage = new LoginPage();
