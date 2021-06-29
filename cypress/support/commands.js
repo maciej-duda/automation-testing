@@ -36,14 +36,11 @@ Cypress.Commands.add("loginUsingApi", (username, password) => {
       },
     }).then((resp) => {
       expect(resp.status).to.eq(200);
-      cy.log("0." + JSON.stringify(resp.body));
-      
-      cy.log("1. " + resp.body.result.token);
       window.localStorage.setItem("token", resp.body.result.token);
     });
   });
 
-  Cypress.Commands.add("loginAsAdminUsingApi", () => {
+  Cypress.Commands.add("loginAsTeacherUsingApi", () => {
     cy.fixture(`teacherCredentials.json`).then((teacherCredentials) => {
       cy.loginUsingApi(Cypress.env('testUserEmail'), teacherCredentials.password);
     });
