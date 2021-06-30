@@ -35,5 +35,6 @@ describe('Course creation by the teacher', () => {
     it('Fill the pricing details and finalize course creation', () => {
         courseCreationPricingModal.verifyIfElementsAreDisplayed();
         courseCreationPricingModal.fillThePricingForm();
+        coursesListingPage.checkIfCourseIsVisible();
     });
 });

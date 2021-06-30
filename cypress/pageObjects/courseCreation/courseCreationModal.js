@@ -24,8 +24,6 @@ class CourseCreationModal {
 	}
 
     fillTheCourseForm() {
-        cy.xpath(selectors.courseSettingsDropdown).click();
-        cy.xpath(selectors.indenpendentCourseOption).click();
         cy.xpath(selectors.courseTitleInput).type('Cypress automation course').should('have.value', 'Cypress automation course');
         cy.xpath(selectors.subjectDropdown).click();
         cy.xpath(selectors.computerScienceSubject).click();

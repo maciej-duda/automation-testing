@@ -1,6 +1,7 @@
 const selectors = {
 	pageURL: "https://uat.app.schoolified.kitemetric.com/courses",
     createCourseButton: "//button[@type='button'][contains(.,'Create Course')]",
+    createdCourseName: "//a[contains(.,'Cypress automation course')]"
 };
 
 class CoursesListingPage {
@@ -10,6 +11,10 @@ class CoursesListingPage {
 
     clickCreateCourseButton() {
         cy.xpath(selectors.createCourseButton).click();
+    }
+
+    checkIfCourseIsVisible() {
+        cy.xpath(selectors.createdCourseName).should('be.visible');
     }
 }
 export default CoursesListingPage;
