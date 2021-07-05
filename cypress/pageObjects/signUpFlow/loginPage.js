@@ -1,5 +1,5 @@
 const selectors = {
-	pageURL: "https://uat.app.schoolified.kitemetric.com/auth/login",
+	pageURL: Cypress.env('env') + "auth/login",
 	emailInput: "//input[@placeholder='Email Address'][contains(@id,'username')]",
 	passwordInput: "//input[@placeholder='Password'][contains(@id,'password')]",
 	loginButton: "//button[@type='submit'][contains(.,'Log In')]"

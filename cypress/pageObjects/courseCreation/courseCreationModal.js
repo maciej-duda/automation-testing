@@ -1,5 +1,5 @@
 const selectors = {
-	pageURL: "https://uat.app.schoolified.kitemetric.com/courses",
+	pageURL: Cypress.env('env') + "courses",
     createCourseButton: "//button[@type='button'][contains(.,'Create Course')]",
     modalHeader: "//div[@class='ant-modal-title'][contains(.,'New Course')]",
     courseSettingsDropdown: "//input[contains(@aria-owns,'basic_courseSetting_list')]",

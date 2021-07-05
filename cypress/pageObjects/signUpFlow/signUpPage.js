@@ -1,5 +1,5 @@
 const signUpFormSelectors = {
-	pageURL: "https://uat.app.schoolified.kitemetric.com/test-program/register",
+	pageURL: Cypress.env('env') + "test-program/register",
     pageHeader: "//h3[@class='font-500 color-info pt-1'][contains(.,'You’re interested in Schoolified.  We’re interested in you!')]",
 	accountTypeDropdown: "//div[@class='ant-select-selector'][contains(.,'I am a...')]",
     accoutTypeTeacher: "//div[@class='ant-select-item-option-content'][contains(.,'Teacher')]",
@@ -7,8 +7,7 @@ const signUpFormSelectors = {
 	lastNameInput: "//input[@placeholder='Last Name'][contains(@id,'lastName')]",
 	emailInput: "//input[@placeholder='Email Address'][contains(@id,'email')]",
     contactCheckbox: "//input[contains(@id,'canContact')][@type='checkbox']",
-    /* to be changed when ID is provided */
-    termsOfUseCheckbox: ":nth-child(6) > .neu-check-box > .ant-checkbox > .ant-checkbox-input",
+    termsOfUseCheckbox: "//input[contains(@id,'isAcceptPolicy')][@type='checkbox']",
     signUpButton: "//button[@type='submit'][contains(.,'Sign Up')]",
 };
 
@@ -29,7 +28,7 @@ class SignUpPage {
         cy.xpath(signUpFormSelectors.lastNameInput).type(lastName);
         cy.xpath(signUpFormSelectors.emailInput).type(emailAddress);
         cy.xpath(signUpFormSelectors.contactCheckbox).click();
-        cy.get(signUpFormSelectors.termsOfUseCheckbox).click();
+        cy.xpath(signUpFormSelectors.termsOfUseCheckbox).click();
         cy.xpath(signUpFormSelectors.signUpButton).click();
         cy.wait(10000);
     }

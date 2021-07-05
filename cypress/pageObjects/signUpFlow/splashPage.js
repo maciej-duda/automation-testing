@@ -1,5 +1,5 @@
 const selectors = {
-	pageURL: "https://uat.app.schoolified.kitemetric.com/",
+	pageURL: Cypress.env('env'),
 	inviteCodeInput: "//input[@placeholder='Invite code'][contains(@id,'inviteCode')]",
 	redeemButton: "//button[@type='submit'][contains(.,'Redeem')]",
 	waitingListSignUpLink: "//a[@class='font-600'][contains(.,'Sign up for the Waiting List')]",

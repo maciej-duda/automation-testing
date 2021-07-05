@@ -1,5 +1,5 @@
 const selectors = {
-	pageURL: "https://uat.app.schoolified.kitemetric.com/courses",
+	pageURL: Cypress.env('env') +"courses",
     createCourseButton: "//button[@type='button'][contains(.,'Create Course')]",
     createdCourseName: "//a[contains(.,'Cypress automation course')]"
 };

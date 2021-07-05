@@ -1,5 +1,5 @@
 const selectors = {
-	pageURL: "https://uat.app.schoolified.kitemetric.com/test-program",
+	pageURL: Cypress.env('env') + "test-program",
 	pageHeader: "//h3[@class='ant-typography'][contains(.,'Beta Program')]",
     waitingListLink: "//div[@role='tab'][contains(.,'Waiting')]",
     searchBox: "//input[contains(@placeholder,'Type to search tester')]",

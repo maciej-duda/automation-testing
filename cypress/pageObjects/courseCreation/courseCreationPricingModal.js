@@ -1,5 +1,5 @@
 const selectors = {
-	pageURL: "https://uat.app.schoolified.kitemetric.com/courses",
+	pageURL: Cypress.env('env') + "courses",
     courseVisibilityLabel: "//label[@for='basic_courseVisibility'][contains(.,'Course Visibility')]",
     coursePriceLabel: "//label[@for='basic_coursePrice'][contains(.,'Course Price')]",
     courseTypeDropdown: "//span[@class='ant-select-selection-item'][contains(.,'Public - Any student can join on CoLab')]",

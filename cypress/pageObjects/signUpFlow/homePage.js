@@ -1,5 +1,5 @@
 const selectors = {
-	pageURL: "https://uat.app.schoolified.kitemetric.com/",
+	pageURL: Cypress.env('env'),
 	welcomeHeader: "//h1[contains(.,'Welcome to Schoolified')]",
     logoutButton: "//button[@type='button'][contains(.,'Log Out')]",
 	testProgramLink: "//a[contains(.,'Beta Program')]"

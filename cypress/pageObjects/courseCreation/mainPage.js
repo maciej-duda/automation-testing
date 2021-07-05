@@ -1,5 +1,5 @@
 const selectors = {
-	pageURL: "https://uat.app.schoolified.kitemetric.com/",
+	pageURL: Cypress.env('env'),
     userEmail: "//b",
     logoutButton: "//button[@type='button'][contains(.,'Log Out')]",
     coursesButton: "//a[contains(.,'Courses')]",
